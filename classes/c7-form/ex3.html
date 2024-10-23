@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연세하나병원 -온라인예약 예제</title>
+</head>
+<body>
+    <div class="reservation">
+    <!-- 강조는 strong b span i em태그 다 가능 -->
+    <h2><em>STEP5.</em><br>
+    예약자정보를 입력해 주세요</h2>
+        <form action="#">
+        <div>
+            <label for="user_name">예약자 성명</label>
+            <input type="text" id="user_name" placeholder="이름">
+        </div>
+        <div>
+            <label for="user_birth">생년월일</label>
+            <!-- 숫자만 입력하는 경우 type속성에 number써라 -->
+            <input type="number" id="user_birth" placeholder="8자리 숫자만 입력해주세요">
+        </div>
+        <div>
+            <label for="user_contect">예약자 연락처</label>
+            <!-- number로 하면- 입력 안됨 -->
+            <input type="text" id="user_contect" placeholder="예시)010-1111-1111">
+        </div>
+        <div>
+            <span>내원 기록</span>
+            <label for="first">초진</label>
+            <input type="radio" id="first" name="visit">
+            <label for="revisit">재진</label>
+            <input type="radio" id="revisit" name="visit">
+        </div>
+        <div>
+            <label for="reserv_txt">예약내용</label>
+            <textarea id="reserv_txt" placeholder="아프신 부위 및 증상을 남겨주세요. 예약내용을 남겨주시면 연락처로 상담전화를 드립니다."></textarea>
+        </div>
+        <div>
+            <input type="checkbox" id="reserv_agree">
+            <label for="reserv_agree">개인정보수집동의</label>
+        </div>
+        <div>
+            <button type="submit">온라인예약 신청하기</button>
+            <!-- input type="reset" value=취소 -->
+            <button type="reset">취소</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

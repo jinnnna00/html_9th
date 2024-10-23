@@ -1,0 +1,70 @@
+.box{
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+}
+.a{
+    transform: translatex(100%);
+    /* 오른쪽으로 (100px)이동
+    (100%)는 자기 너비인 300px만큼 이동(%는 일반적으로 부모단위를 기준으로 하지만 transform에선 자신을 기준으로 한다) */
+}
+.b{
+    transform: translateY(-50%);
+    /* 위로 자기 크기 반만큼 이동 */
+}
+.parent{
+    background-color: green;
+    perspective: 1000px;
+    /* 원근감을 만들어준다 앞뒤로 1000px의 공간이 생긴다 */
+    min-height: 900px;
+    perspective-origin:0 50%;
+    /* 입체축의 좌표 
+    좌표 원래 중앙으로 설정되어있다
+    가장 먼 곳의 좌표는 50% 50%이다(먼 곳?)*/
+}
+.c{
+    transform: translateZ(-1000px);
+    margin-left: auto;   
+}
+.d, .f{
+    transition: all 1s ease 0s;
+    /* 전체/ 1초 동안/ 가속도/ 딜레이0초 */
+    transform-origin: 100% 0;
+    /* 변형축의 위치를 변경
+    50% 50% 중앙값이 기본설정
+    x축 100%, y축 0% -> 우측상단을 기준축으로한다 */
+}
+.d:hover{
+    transform: rotate(-30deg);
+    /* -하면 왼쪽으로 회전 */
+}
+.e, .f{
+    transition: all 3s ease 0s;
+}
+.e:hover{
+    transform: rotateY(360deg);
+}
+.f:hover{
+    transform: rotateX(180deg);
+}
+.g{
+    transition: all 1s ease 0s;
+    margin: 0 auto;
+    transform-origin: 0% 50%;
+    /* 변형의 기준점-x축 왼쪽 y축 중앙에서 시작하겠다 */
+}
+.g:hover{
+    transform:scaleX(2);
+    /* 2배를 의미 =200%로 써도 됨 */
+}
+.h,.i{
+    transition: all 1s ease 0s;
+}
+.h:hover{
+    transform: scaleY(200%);
+}
+.i:hover{
+    transform: scale(2,3);
+    /* scale(2)라고 값을 한개만 적으면 x축,y축 둘 다 2배로 늘어난다 */
+
+}

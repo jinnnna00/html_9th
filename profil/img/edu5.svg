@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.33 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #29b6f6;
+      }
+
+      .cls-2 {
+        fill: #7c4dff;
+      }
+
+      .cls-3 {
+        fill: #e64a19;
+      }
+
+      .cls-4 {
+        fill: #66bb6a;
+      }
+
+      .cls-5 {
+        fill: #ff7043;
+      }
+    </style>
+  </defs>
+  <g id="container_grid" data-name="container grid">
+    <g>
+      <path class="cls-3" d="M12.5,11.67H5.83C2.61,11.67,0,9.06,0,5.83H0C0,2.61,2.61,0,5.83,0h6.67V11.67Z"/>
+      <path class="cls-2" d="M11.67,23.33H5.83c-3.22,0-5.83-2.61-5.83-5.83H0c0-3.22,2.61-5.83,5.83-5.83h5.83v11.67Z"/>
+      <path class="cls-4" d="M5.83,35h0c-3.22,0-5.83-2.61-5.83-5.83H0c0-3.22,2.61-5.83,5.83-5.83h5.83v5.83c0,3.22-2.61,5.83-5.83,5.83Z"/>
+      <path class="cls-5" d="M17.5,11.67h-5.83V0h5.83c3.22,0,5.83,2.61,5.83,5.83h0c0,3.22-2.61,5.83-5.83,5.83Z"/>
+      <circle class="cls-1" cx="17.5" cy="17.5" r="5.83"/>
+    </g>
+  </g>
+</svg>

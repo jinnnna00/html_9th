@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 두번째</title>
+    <link rel="stylesheet" href="./css/ex2.css">
+</head>
+<body>
+    <div class="frame_wrap">
+        <div class="common_frame frame_1">
+            <section class="a">a-section</section>
+            <section class="b">b-section</section>
+        </div>
+        <div class="common_frame frame_2">
+            <section class="c">c-section</section>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    A: frame_wrap클래스의 테두리를 포함한 박스너비 /1000+패딩30,30=1060
+    B: a클래스의 테두리를 포함한 박스높이 /패딩10,10+높이150=170
+    C: b클래스의 컨텐트박스의 높이 /높이200-보더10-보더10=180
+    D: c클래스의 테두리를 포함한 박스의 높이 250
+    E: frame_1클래스의 테두리를 포함한 박스의 높이 
+    / a섹션170+b섹션200(frame1의 컨텐트박스 총370)패딩30,20+1=421
+    F: frame_2클래스의 테두리를 포함한 박스의 높이
+    / 패딩20,20+c섹션250=240
+
+    A+B+C+D+E+F ?2371
+ -->
+
+
+문제
+검정-10
+패딩 -50
+a-150
+초록 10
+b-180 (초록 10 10)
+초록10
+패딩 20
+회색선 1
+패딩 20
+보라 10
+c-250
+보라 10
+패딩 40
+검정 10

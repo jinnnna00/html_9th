@@ -1,0 +1,19 @@
+.wrap{
+    background: bisque;
+    /* 모든 화면에 적용되는 기본 스타일 */
+}
+@media (min-width:1500px){
+    /* 화면 최소 너비가 1500픽셀인 경우 -> 1500픽셀보다 큰 경우 적용되는 스타일 */
+    .wrap{
+        background: coral;
+        display: flex;
+        /* max-width로 적용하는 경우 1400픽셀인 경우에도 display:flex는 적용된다 */
+    }
+}
+@media (min-width:1400px) and (max-width:1499px){
+    /* 화면최소너비가 1400픽셀보다 크고 1499보다 작은 경우 적용되는 스타일
+    and 앞 뒤로띄어쓰기 해야한다 */
+    .wrap{
+        background: rgb(80, 184, 80);
+    }
+}

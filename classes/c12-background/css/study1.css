@@ -1,0 +1,79 @@
+*{margin: 0; padding: 0;}
+.pre{
+    white-space: pre;
+    /* 한줄씩 띄워지는 용도 */
+}
+.prewrap{
+    white-space: pre-wrap;
+    /* 화면 작게 했을 때 글자 아래로 내려온다*/
+}
+.desc{
+    padding-bottom: 50px;
+    border-bottom: 5px solid black;
+    margin-bottom: 50px;
+    font-size: 1.4rem;
+}
+.box{
+    color: #ffffff;
+    background-color: blue;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+}
+.box2{
+    margin: 100px 0;
+    height: 80vh; 
+    background-color: bisque;
+    background-image: url(../img/kingfisher-9016787_640.jpg);
+    background-repeat: no-repeat;
+    /* 기본값이 가로세로 반복이기 때문에 repeat-x로 하면 가로로만 반복되고 no-repeat로 하면 반복되지 않는다 */
+    background-position: 100px 200px;/*기본값이 0px 0px*/
+    background-position: 50% 50%; /*이미지 가운데 오게 하기*/ /*오른쪽 아래에 오게 하려면 100% 100%로 */
+    background-position: left bottom; /*키워드로*/
+    background-position: calc(100% - 60px) calc(100% - 70px); /*같은 단위가 아니더라도 계산식을 쓸 수 있다
+    부호 앞 뒤로 띄어쓰기를 해야한다
+    오른쪽에서 60px 아래에서 70px떨어진 곳에 이미지 배치*/
+}
+.box3{
+    height: 100vh;
+    background-color: aquamarine;
+    background-image: url(../img/kingfisher-9016787_640.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px auto; /*가로사이즈 300으로 하고 세로사이즈는 비율에 맞춘다*/
+    background-size: 100% auto; /*가로 전체화면크기로*/
+    background-size: auto 100%;
+    background-size: cover; /*태그의 공간을 가득 채우는 방식 - 배경 이미지의 잘려나가는 부분이 생길 수 있다*/
+    background-size: contain;
+    /* 이미지의 비율을 고정(이미지가 잘리지 않는 선에서) 태그의 공간에 들어갈 수 있는 최대 크기로 들어감 */
+    background-position: 50% 50%;
+    /* background-position: 50% calc(50% + 10vh); 위치 가운데로 오고 세로는 위에서 10%더 내려오게한다*/ 
+    background: aquamarine url(../img/kingfisher-9016787_640.jpg) no-repeat 0 0 /cover;
+    /* 축약형을 많이쓴다
+    background-size앞에는 /슬래시 써서 구분해줘야한다
+    순서 외울 것 (두문자?curps)*/ 
+}
+.box4{
+    border: 1px solid #ffffff;
+    width: 50vw; /*vw, rem 단위 다 사용가능 vw를 패딩, 마진의 단위로도 쓸 수 있다*/
+    height: 50vw;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background: aquamarine url(../img/kingfisher-9016787_640.jpg) no-repeat 50% 50% /cover;
+    background-attachment:fixed;
+    /* fixed : 배경이미지가 태그와 상관없이 화면에 고정된다.
+    동일한 태그를 여러개 중복할 경우 하나의 이미지에 동일한 효과가 적용된다*/
+}
+.box4.blend{
+    background-blend-mode: multiply;
+}
+.blur{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto; /*위아래는 auto값 쓸 수 없다*/
+    margin-top: 10%;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+/* 비표준css속성 / 표준css속성 
+-webkit-이라는 접두어를 사용하여 비표준 css속성을 임시로 사용할 수 있다.*/
+}

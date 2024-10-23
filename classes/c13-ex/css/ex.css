@@ -1,0 +1,50 @@
+*{padding: 0; margin:0}
+@font-face {
+    font-family: "풀무원";
+    src: url(../ex3/PulmuoneLOHASBold.woff);
+}
+.pre{
+    white-space: pre;
+    /* 실무에서는 이거 안쓴다 */
+}
+.head{
+    background-image: url(../ex3/sub_vis01_02.jpg);
+    background-size: cover;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    background-color: bisque;
+    margin-left: 360;
+    justify-content: center;
+}
+
+.h2{
+    font-family: "Noto sans kr";
+    background-image: url(../ex3/sub_tit_line.gif);
+    background-repeat: repeat-x;
+    background-position: center;
+    margin: 50px 0 ; 
+    font-size: 20px;
+}
+
+.h3{
+    font-family: "풀무원";
+    font-size: 52px;
+    margin: 100px 0 50px 0;
+    padding: 0 70px;
+    text-align: center;
+
+}
+.box{
+    background-color: #eee;
+    width: 810px;
+    padding: 40px 90px;
+    font-family: "풀무원";
+    font-size: 35px;
+    text-align: center;
+}
+.p2{
+    margin: 25px;
+}

@@ -1,0 +1,43 @@
+.box{
+    background: rgb(250, 198, 206);
+    width: 500px;
+    padding: 20px;
+}
+.box section{
+    border: 1px solid blue;
+}
+.box section:nth-of-type(1){
+    /* 첫번째 section의 크기를 40px로 설정 */
+    /* 넘치는 부분을 어떻게 보이게 할 것인지? 안보이게할지 보이게할지 스크롤을 만들지 */
+    height: 40px;
+}
+.desc{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+}
+.hidden{
+    overflow: hidden; /*흘러넘치는 텍스트가 보이지 않게된다*/
+}
+.scroll{
+    overflow: scroll; /*스크롤바가 생김*/
+    /* auto값 사용가능 */
+}
+.over_y{
+    overflow-y: scroll; /*y축 스크롤만 생김(overflow되지 않으면 생기지 않는다)*/
+    /* auto값 사용가능 */
+
+}
+.over_x{
+    /*가로 스크롤 생기려면 박스에 맞게 줄바꿈이 되지 않도록 먼저 설정해야함*/
+    white-space: nowrap;
+    overflow-x: scroll;
+    /* auto값 사용가능 */
+}
+.auto{
+    overflow: auto;
+    /* 컨텐츠의 양을 보고 overflow될거같으면 자동으로 스크롤이 생김 */
+}
+.visible{
+    overflow: visible;
+}

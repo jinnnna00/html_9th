@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <link rel="stylesheet" href="./css/study2.css">
+</head>
+<body>
+    <div class="box_wrap">
+        <!-- div와 동일하게 사용 이미지영역을 만들때 사용한다 -->
+        <figure class="box">
+            <img src="./img/img1.jpg" alt="예제1">
+            <figcaption>원본</figcaption>
+        </figure>
+        <figure class="box filter1">
+            <img src="./img/img1.jpg" alt="예제1">
+            <figcaption>filter:grayscale(0.5)</figcaption>
+        </figure>
+        <figure class="box filter2">
+            <img src="./img/img1.jpg" alt="예제1">
+            <figcaption>filter: brightness(0.5)</figcaption>
+        </figure>
+        <figure class="box filter3">
+            <img src="./img/img1.jpg" alt="예제1">
+            <figcaption>filter: blur(10px);</figcaption>
+        </figure>
+        <figure class="box filter4">
+            <img src="./img/img1.jpg" alt="예제1">
+            <figcaption>filter: hue-rotate(180deg);</figcaption>
+        </figure>
+    </div>
+    <hr>
+    <h1>mix-blend-mode</h1>
+    <div class="box_wrap">
+        <figure class="box bg">
+            <img src="./img/img3.jpg" alt="예제2">
+            <figcaption>원본</figcaption>
+        </figure>
+        <figure class="box bg mode1">
+            <img src="./img/img3.jpg" alt="예제2">
+            <figcaption>mix-blend-mode: color-burn;</figcaption>
+        </figure>
+        <figure class="box bg mode2">
+            <img src="./img/img3.jpg" alt="예제2">
+            <figcaption>mix-blend-mode:difference;</figcaption>
+        </figure>
+        <figure class="box bg mode3">
+            <img src="./img/img3.jpg" alt="예제2">
+            <figcaption>mix-blend-mode: overlay;</figcaption>
+        </figure>
+    </div>
+</body>
+</html>s

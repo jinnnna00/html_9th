@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단예제</title>
+</head>
+<body>
+    <ul>
+        <li>2x1=2</li>
+        <li>2x2=4</li>
+        <li>2x3=6</li>
+        <li>2x4=8</li>
+        <li>2x5=10</li>
+        <li>2x6=12</li>
+        <li>2x7=14</li>
+        <li>2x8=16</li>
+        <li>2x9=18</li>
+    </ul>
+    <script>
+            let dan = Number(prompt("구구단 단수를 입력하시오"))
+            //사용자가 입력한 단수를 2~9까지로만 제한하는 방법 :if(){}else{}
+            //단수에 2보다 작거나 9보다 큰 숫자를 입력한 경우 알림창 뜬다, 그렇지 않다면 아래 식으로 계산된다
+            if(dan<2 || dan>9){
+                alert("단수는 2단부터 9단 사이만 입력하시오")
+            }else{
+                document.write("<ul>")
+                    for(let i=1; i<10; i++){
+                //     document.write(`<li>`+2+`x`+i+`=`+i*2+`</li>`)
+                //     // document.write(`<li>2x${i}=${i*2}</li>`)
+                // document.write("</ul>")
+               
+                    document.write(`<li>${dan}x${i}=${i*dan}</li>`)
+                document.write("</ul>")
+                }
+            }
+            
+    </script>
+</body>
+</html>

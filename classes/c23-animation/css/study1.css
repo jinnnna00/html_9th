@@ -1,0 +1,42 @@
+@keyframes my_rotate {
+    /* my_rotate자리에 등록하려는 애니메이션 이름을 자유롭게 지정하여 등록 */
+    /* 구간을 설정
+    0,100을 설정하면 중간은 자동으로 채워지게 된다 */
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(140deg);
+        /* 50%설정하면 두번함 */
+    }
+}
+.box{
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+}
+.ani1{
+    animation-name: my_rotate;
+    /* 이 애니메이션을 적용하겠다
+    transition과 유사하다 시간,속도 정해줘야 */
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    /* 끝나면 원래 css로 돌아간다 */
+    animation-iteration-count: 2;/*(iteration:반복)기본값은 1이다*/
+    /* 방향은 0에서 100%방향으로 돌고 다시 0에서 시작
+    infinite 무한대로 반복  */
+    animation-direction: normal; 
+    /*recerse: 반대방향으로 돈다 100%에서 0%로 진행
+    alternate: 양방향 갔다 다시온다
+    alternate-reverse: 반대로 시작*/
+    animation-fill-mode: backwards;/*기본값 none*/
+    /* forwards: 끝나는 시점(100%)으로 멈춘다
+    backwards: 시작지점(0%)으로 끝낸다(none이랑 동일) */
+
+    animation: my_rotate 4s linear 0s infinite normal forwards;/*축약형*/
+}
+.ani1:hover{
+    animation-play-state: paused;
+    /* 마우스 올리면 멈춘다 */
+}

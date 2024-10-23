@@ -1,0 +1,93 @@
+.a{
+    font-size: 20px;
+}
+.a p{
+    font-size: 2rem;
+    /* 2rem -> html의 기본 폰트크기값인 16px의 두배인 32px이다 
+    html 글씨 크기를 설정했다면 그게 rem이 된다*/
+}
+.a p:nth-of-type(2n){
+    font-size: 2em;
+    /* 2em -> 부모태그인 a클래스에 적용된 20px의 두배인 40px이 된다 */
+    background: papayawhip;
+}
+html{
+    font-size: 12px;
+    /* 이제부터 적용되는 rem은 12px이 된다 
+    그러므로 위에 적용한 2rem은 24px이 된다*/
+}
+.desc{
+    font-size: 2rem;
+    /* 2rem= 24px,*/
+    line-height: 120%;
+    /* 24*1.2->28.8px이 된다 */
+    line-height: 3; /*300%라는 뜻*/
+    /* 24*3 = 72px */
+    line-height: 100px;
+    border: 1px solid black;
+    /* line height가 72px이므로 3줄*72+border1 해서 총 박스의 크기는 218px */
+}
+.c{
+    font-weight: bold;
+}
+.d{
+    font-style: italic;
+}
+.d address{
+    font-style: normal;
+}
+.e{
+    letter-spacing: 20px;
+}
+.e p:last-of-type{
+    /* 마지막 p태그를 의미 */
+    letter-spacing: -5px;
+}
+.f{
+    word-spacing: 30px;
+}
+.nowrap{
+    white-space: nowrap;
+}
+.pre{
+    white-space: pre;
+}
+.h>p:last-of-type{
+    text-indent: 50px;
+}
+.i ul>li:nth-of-type(1){
+    text-decoration: underline;
+}
+.i ul>li:nth-of-type(2) a{
+    /* a태그까지 선택해줘야지 링크 밑줄 없앨 수 있다 */
+    text-decoration: none;
+}
+.i ul>li:nth-of-type(3){
+    text-decoration: line-through;
+}
+.j ul+p{
+    /* ul태그의 다음형제 p태그 */
+    width: 400px;
+    border: 1px solid black;
+    text-align: justify;
+}
+.k ul+p{
+    text-transform: uppercase; /*전부대문자*/
+    text-transform: lowercase; /*전부소문자*/
+    text-transform: capitalize; /*단어 앞글자만 대문자*/
+}
+.l>*:last-of-type{
+    border: 1px solid black;
+    word-break: break-all;
+    word-break: keep-all;
+    /* keep-all 한중일 텍스트에서는 줄을 바꿀 때 단어를 끊지 않는다. 다른 언어에서는 normal과 동일함 */
+}
+.m strong{
+    border: 1px solid red;
+    font-size: 5rem;
+}
+.m i{
+    font-size: 3rem;
+    border: 1px solid blue;
+    vertical-align: middle;
+}

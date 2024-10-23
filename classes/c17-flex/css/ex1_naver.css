@@ -1,0 +1,111 @@
+*{
+    margin: 0; padding: 0;
+}
+header{
+    width: 1280px;
+    height: 215px;
+    background-color: lightblue;
+    margin: 0 auto;
+}
+main{
+    width: 1280px;
+    height: auto; /*내용이 없어서 헷갈릴 수 있으니까 min-height설정*/
+    min-height: 300px;
+    background-color: lightpink;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    /* left랑 right 양쪽으로 배치되므로 자동으로 가운데 여백이 생김 */
+    padding-bottom: 60px;
+}
+.left{
+    background-color: lightyellow;
+    width: 830px;
+    /* margin-right: 30px; (justyfy-content대신 쓸 수 있다)*/
+}
+.left>div{
+    margin-bottom: 16px;
+}
+.left>div:last-of-type{
+    margin-bottom: 0;
+    /* 모든 태그에 아래마진을 설정한 뒤 마지막 div태그에는 아래 마진을 0으로 설정할때 */
+}
+.a{
+    background-color: orange;
+    height: 130px;
+    /* margin-bottom: 16px; */
+}
+.b{
+    background-color: orange;
+    height: 426px;
+    /* margin-bottom: 16px; */
+}
+.c{
+    background-color: orange;
+    height: 560px;
+    /* margin-bottom: 16px; */
+}
+.d{
+    background-color: orange;
+    height: 858px;
+    /* margin-bottom: 16px; */
+}
+.right{
+    background-color: lightgreen;
+    width: 420px;
+}
+.right>div{
+    margin-bottom: 16px;
+}
+.right>div:last-of-type{
+    margin-bottom: 0;
+}
+.e{
+    background-color: lemonchiffon;
+    height: 164px;
+}
+.f{
+    background-color: lemonchiffon;
+    height: 240px;
+}
+.g{
+    background-color: lemonchiffon;
+    height: 80px;
+}
+.h{
+    background-color: lemonchiffon;
+    height: 172px;
+}
+.i{
+    background-color: lemonchiffon;
+    height: 236px;
+}
+.j{
+    background-color: lemonchiffon;
+    height: 236px;
+}
+.k{
+    background-color: lemonchiffon;
+    height: 240px;
+}
+.l{
+    background-color: lemonchiffon;
+    height: 516px;
+}
+.m{
+    background-color: lemonchiffon;
+    height: 80px;
+}
+
+footer{
+    width: auto; /*100%로 하면 컨텐츠박스의 너비를 설정하게 된 것이므로 스크롤바 생길 수 있음 그러므로 auto로 설정하는 것이 좋다*/
+    height: 430px;
+    background-color: lightgray;
+    padding: 30px 0 78px;
+    box-sizing: border-box;
+}
+.innerfooter{
+    width: 1280px;
+    background-color: lightseagreen;
+    margin: 0 auto;
+}

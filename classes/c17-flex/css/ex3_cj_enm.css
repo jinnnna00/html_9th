@@ -1,0 +1,59 @@
+*{
+    padding: 0; margin: 0;
+}
+header{
+    /* 검은색 배경이 칠해져야하기 때문에 전체 다 너비로 잡는다(auto) */
+    /* 헤더 자체에 높이를 주기보다는 두 단을 각각 지정하는게 더 편하다 */
+}
+.headerTop{
+    height:48px;
+    background-color: black;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    /* 컨텐츠를 가운데로 보내기 위해선 먼저 아이템을 정렬*/
+    align-items: center;
+    /* 기본값이 stretch이기 때문에 컨텐츠 크기에 맞게해서 중앙으로 배치 */
+}
+.topmenu{
+    list-style: none;
+    /* 링크 스타일 없애기 */
+    display: flex;
+    justify-content: flex-end;
+}
+.headerBottom{
+    height: 72px;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+}
+.innerContent{
+    /* 헤더에 직접 너비를 주지 않고 따로 영역을 나눠서 하는게 나중에 수정하기도 편하고 보이지 않는 선이 있기 때문*/
+    width: 1344px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+.conA{
+    height: 1217px;
+    background-color: aquamarine;
+}
+.conB{
+    height: 492px;
+    background-color: sandybrown;
+}
+.conC{
+    height: 1116px;
+    background-color: lightblue;
+}
+.conD{
+    height: 594px;
+    background-color: rgba(128, 128, 0, 0.637);
+}
+.conE{
+    height: 518px;
+    background-color: lightpink;
+}
+footer{
+    height: 784px;
+    background-color: rgba(243, 243, 125, 0.801);
+}
+

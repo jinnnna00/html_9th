@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>참 거짓 데이터</title>
+</head>
+<body>
+    <h1>boolean 데이터</h1>
+    <p>값이 두개 밖에 없다. true / false</p>
+    <h2>비교를 통하여 참거짓이 계산된다.</h2>
+    <p>크다, 작다, 길다, 같지않다 와 같은 비교를 통하여 참거짓이 계산된다.</p>
+    <p>!는 자바스크립트에서 부정의 의미(not)으로 사용된다.</p>
+    <p>어떤 존재가 있다 없다</p>
+
+    <script>
+        "adfo"
+        454
+        true
+        false
+        console.log(10>7) 
+        console.log(10<7)
+        console.log(10>=10) //크거나 같다
+        console.log(10=="10") //테이터 형태까지는 아니지만 대충 같다
+        console.log(10===20-10) //데이터형태(숫자,문자)까지 완벽하게 같다
+        console.log(10!=10) // 같지 않다(!는 부정의 의미로 사용한다)
+        console.log(10!==10) 
+        console.log(!(10>3)) //true가 아니다로 해석 -> false표시된다
+
+    </script>
+
+    <h1>있으면 true 없으면 false</h1>
+    <h3>false로 간주되는 경우</h3>
+    <ul>
+        <li>숫자데이터인데 값이 0인 경우</li>
+        <li>문자데이터인데 내용이 없는 빈문자인 경우</li>
+        <li>변수를 선언했는데 변수 안에 아무 값도 저장되지 않은 경우</li>
+        <li>undefined 값은 false로 간주한다</li>
+        <li>null 값은 false로 간주한다</li>
+    </ul>
+
+    <script>
+        console.log(123) // 수가 있으므로 true로 간주된다.
+        console.log(-10) // true
+        console.log(0) // 수가 없으므로 false로 간주된다.
+        console.log("") //문자데이터형태를 띄지만 문자 내용이 없으므로 false로 간주된다.
+        let a //변수를 만들고 선언하지 않은경우 false로 간주된다
+        console.log(a)
+        undefined // undefined데이터 값은 기본적으로 false로 간주된다
+        let b = null //null은 아무 내용을 넣지 않겠다는 설정
+        // let result = prompt("나이를 입력해주세요") 
+        console.log(result) //null
+        !"" //true로 '간주'된다 왜냐면 애초에 false로 간주된거기때문에
+        !0 // true로 간주된다
+        let c
+        !c // true로 간주된다(c라는 변수에 값이 없다면)
+        !undefined // true로 간주된다
+        !null // true로 간주된다
+    </script>
+</body>
+</html>

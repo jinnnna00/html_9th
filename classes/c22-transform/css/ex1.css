@@ -1,0 +1,34 @@
+*{
+    margin: 0; padding: 0;
+}
+header{
+    background-color: lightgreen;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    top: 0;
+    transform: translate(-100%);
+    transition:all 0.6s ease 0s;
+    /* transition은 변하기 전 속성에 쓴다 */
+}
+header.on{
+    transform:translateY(0%);
+}
+nav{
+    /* 보였을때 모습을 먼저 배치하고 그다음 hover효과를 준다 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    transform: translateX(100%);
+    transition: all 0.5s ease 0s;
+}
+nav.on{
+    transform: translate(0%);
+    /* on클래스가 붙으면 원래상태로 돌아오도록
+    javascript로 해야한다 */
+}

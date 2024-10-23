@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항연산자 - ternary operator</title>
+</head>
+<body>
+    <h1>삼항연산자</h1>
+    <p>조건? 조건이 참일때 남겨지는 값: 조건이 거짓일때 남겨지는 값</p>
+    <script>
+        let result1 = 5>3?"a":"b" //true면 a가 남고 false면 b가 남는다
+        console.log(result1)
+        //0>18?""
+        let result2 = ""?"배고픔":"배부름" // !""?"배고픔":"배부름"로 바꾸면 반대
+        console.log(result2) //빈칸은 false로 간주되기 때문에 배부름이라는 문자데이터가 남아 표시된다
+        let result3 = 3-3?100:50
+        console.log(result3) //0이니까 false니까 50 표시
+        let score = 80 //70보다 크고 80보다 크지 않으므로 C라고 나온다
+        console.log(score>80?"A":score>80?"B":score>70?"C":"D")
+        //왼쪽에서부터 해석하고 :앞뒤로 TorF 인지 
+    </script>
+</body>
+</html>

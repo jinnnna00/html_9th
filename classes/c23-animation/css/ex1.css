@@ -1,0 +1,78 @@
+*{
+    margin: 0; padding: 0;
+}
+.hero{
+    height: 100vh;
+    /* 너비는 auto
+    영상의 이미지가 hero를 넘어서기 때문에 스크롤 생기는거 */
+    position: relative;
+    /* 글자를 영상 위에 띄우기 위해 hero섹션을 기준으로 하고 글자를 absolute로 설정하여 위로 띄워준다 */
+}
+.hero video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 너비나 높이 둘 중 하나는 꼭 정해져있어야함 */
+}
+.floatingTxt{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: #fff;
+    /* 텍스트 위치를 중앙정렬로 만드는 방법
+    .innerTxt에 줘도 되지만 이게 더 짧게 써서 하는 방법임 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerTxt{
+    /* 부모만큼의 너비를 가지고 텍스트 써진만큼의 높이를 가진다 */
+    border: 1px solid lime;
+    width: 60%;
+    text-align: center;
+}
+.innerTxt h2{
+     /* 글자 하나하나 효과주기
+     b태그는 인라인태그이기 때문에 transform효과가 적용되지 않는다 transform은 사이즈가 정해진 박스형태에만 적용되기 때문
+     */
+    display: flex;
+    justify-content: center;/*뭐가 달라진거지*/
+}
+.innerTxt h2 b{
+    opacity: 0;
+    font-size: 5rem;
+    animation: fadein ease 4s 0s;
+    /* 이 뒤에 iteration count 몇번 재생,
+    방향, 마지막에 끝나는 화면 설정 */
+}
+.innerTxt h2 b:nth-of-type(1){animation: fadein ease 4s 0s forwards;}
+.innerTxt h2 b:nth-of-type(2){animation: fadein ease 4s 0.1s forwards;}
+.innerTxt h2 b:nth-of-type(3){animation: fadein ease 4s 0.2s forwards;}
+.innerTxt h2 b:nth-of-type(4){animation: fadein ease 4s 0.3s forwards;}
+.innerTxt h2 b:nth-of-type(5){animation: fadein ease 4s 0.4s forwards;}
+.innerTxt h2 b:nth-of-type(6){animation: fadein ease 4s 0.5s forwards;}
+.innerTxt h2 b:nth-of-type(7){animation: fadein ease 4s 0.6s forwards;}
+.innerTxt h2 b:nth-of-type(8){animation: fadein ease 4s 0.7s forwards;}
+.innerTxt h2 b:nth-of-type(9){animation: fadein ease 4s 0.8s forwards;}
+
+/* 글자가 안보이다가 서서히 나오게 하는 효과 만들기 */
+@keyframes fadein {
+    0%{
+        transform: translateY(20px)scale(10)rotate(30deg);
+        color: blue;
+        /* scale, rotate, color 등 css 다 가능함 */
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(20px)scale(1)rotate(0);
+        /* 이렇게 추가하면 opacity1 된다음에 위로 올라오게 된다 */
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+   
+}

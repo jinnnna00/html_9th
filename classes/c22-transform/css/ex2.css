@@ -1,0 +1,21 @@
+.box{
+    transition: all 1s ease 0s;
+    border: 5px solid #000;
+    width: 300px;
+    height: 300px;
+    transform: 
+    translateX(100px)
+    translateY(100px)
+    rotate(30deg)
+    scale(0.6);
+    /* 그대로 이어쓰면 된다 콤마 쓰지x 엔터쳐서 쓰기 가능 */
+}
+.mom:hover .box{
+   /* .mom에 마우스를 올리면 .box가 된다는 뜻
+   .box:hover로 해도 됨 */
+    transform: 
+    translateX(0)
+    translateY(0)
+    rotate(0)
+    scale(1);
+}

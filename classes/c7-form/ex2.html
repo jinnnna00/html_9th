@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스팀 회원가입 예제</title>
+</head>
+<body>
+    <div class="create account">
+        <form action="#">
+            <h2>CREATE YOUR ACCOUNT</h2>
+            <div>
+                <label for="user_email">Email Address</label><br>
+                <input type="text" id="user_email">
+            </div>
+            <div>
+                <label for="user_email_confirm">Confirm your Address</label><br>
+                <input type="text" id="user_email_confirm">
+            </div>
+            <div>
+                <label for="user_residence">Country of Residence</label><br>
+                <!-- name쓰고싶으면 id랑 똑같이 쓰면 된다 -->
+                <select name="user_residence" id="user_residence">
+                    <option value="Korea, Republic of" selected>Korea, Republic of</option>
+                    <option value="">Afghanistan</option>
+                    <option value="">Aland Islands</option>
+                    <option value="">Albania</option>
+                    <option value="">Algeria</option>
+                    <option value="">American Samoa</option>
+                    <option value="">Andorra</option>
+                </select>
+            </div>
+            <!-- 구글 리캡차 연동해주세요 /////////////////// 라고하면 개발자들이 함 -->
+            <div class="recaptcha"></div>
+            <div>
+                <input type="checkbox" id="user_agree">
+                <label for="user_agree">
+                I am 13 years of age or older and agree to the terms of the <i><a href="#" target="_blank">Steam Subscriber Agreement</i></a> and the <a href="#" target="_blank">Valve Privacy Policy</a>.</label>
+            </div>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+</body>
+</html>

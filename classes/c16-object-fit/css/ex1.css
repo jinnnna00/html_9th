@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    border: 1px solid red;
+    margin: 0 20px;
+    /* height: 200px;
+    overflow: hidden; */
+    height: 300px;
+}
+.hero img{
+    width: 100%;
+    /* position값을 통해서 이미지를 중앙으로 오게 할 순없다 */
+    height: 200px;
+    /* 가로세로 길이를 정해줘야 cover값 쓸 수 있음 */
+    object-fit: cover;
+    /* 높이 고정 상태로 화면크기에 맞춰 사진 늘어난다 */
+}
+.content{
+    border: 10px solid red;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+}
+.content video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrap{
+    width: 80%;
+    height: 70vh;
+    margin: 0 auto;
+    /* border: 10px solid green; */
+}
+.wrap{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

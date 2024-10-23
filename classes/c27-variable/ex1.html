@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표 예제</title>
+    <link rel="stylesheet" href="./css/ex1.css">
+</head>
+<body>
+    <!-- <p>사용자에게 이름과 국어, 영어, 수학, 사회, 과학 다섯과목의 점수를 각각 물어보고, 입력한 점수의 합산점수와 평균을 계산하여 성적표 양식을 만들어주는 페이지를 제작해보겠음</p> -->
+     <!-- <div class="score">
+        <h2>성적표</h2>
+        <p class="name">이름 : 유우시</p>
+        <table class="scoreTable">
+            <tr>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>사회</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>40</td>
+                <td>100</td>
+                <td>10</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <th colspan="5">합산점수</th>
+            </tr>
+            <tr>
+                <td colspan="5">220점</td>
+            </tr>
+            <tr>
+                <th colspan="5">평균</th>
+            </tr>
+            <tr>
+                <td colspan="5">44점</td>
+            </tr>
+        </table>
+        <p class="coment">유우시 학생의 평균점수는 44점으로 독려가 필요합니다.</p>
+     </div> -->
+     <script>
+        let name = prompt("이름을 입력해주세요")
+        let kor = Number(prompt("국어점수를 입력해주세요"))
+        let mat = Number(prompt("수학점수를 입력해주세요"))
+        let soc = Number(prompt("사회점수를 입력해주세요"))
+        let eng = Number(prompt("영어점수를 입력해주세요"))
+        let sci = Number(prompt("과학점수를 입력해주세요"))
+        let total = Number(kor+eng+mat+soc+sci).toFixed(2)
+        let average = Number(total/5).toFixed(2)
+        //total이랑 average는 Number없어도 됨
+        console.log(total)        
+        //소수점 표시하는 방법(소수 둘째 자리까지 표시)
+        // let average = Math.round(total/5*100)/100
+        let n = 2 //소수 둘째 자리로 계산
+        // let average = Math.round(total/5*(Math.pow(10,n)))/Math.pow(10,n)
+
+        //소수점 오류 해결법 ->입력하면 소수점 둘째자리까지 나온다
+        // ().toFixed(2)
+
+        
+
+
+        // html 넣을 때 백틱썼으니까 변수 입력할때도 백틱으로 
+        //${name} 백틱인 경우 변수값 이렇게 입력할 수 있음 
+        document.write(`<div class="score">
+        <h2>성적표</h2>
+        <p class="name">이름 : `+name+`</p>
+        <table class="scoreTable">
+            <tr>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>사회</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td>`+kor+`</td>
+                <td>`+eng+`</td>
+                <td>${mat}</td>
+                <td>`+soc+`</td>
+                <td>`+sci+`</td>
+            </tr>
+            <tr>
+                <th colspan="5">합산점수</th>
+            </tr>
+            <tr>
+                <td colspan="5">`+total+`</td>
+            </tr>
+            <tr>
+                <th colspan="5">평균</th>
+            </tr>
+            <tr>
+                <td colspan="5">`+average+`</td>
+            </tr>
+        </table>
+        <p class="coment">`+name+` 학생의 평균점수는 `+average+`점으로 독려가 필요합니다.</p>
+     </div>`)
+     </script>
+</body>
+</html>

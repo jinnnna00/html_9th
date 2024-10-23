@@ -1,0 +1,76 @@
+p{
+    color: red;
+}
+div p{
+    /* div 안에 포함된 모든 p태그를 선택 (우선순위점수2점)*/
+    color: blue;
+}
+div>p{
+    /* div안에 포함된 자식들 중에서 모든 p태그를 선택 */
+    color: green;
+}
+.box>p{
+    /* box클래스 안에 p태그 선택 (우선순위 점수 11점)*/
+    color: purple;
+}
+li>p{
+    /* 우선순위 점수 2점 */
+    color: black;
+}
+.box li>p{
+    color: aliceblue;
+}
+.box li>p{
+    color: orange;
+}
+.list1~li{
+    /* list1클래스의 다음 형제태그들 중 li태그를 전부 선택
+    본인을 포함해서 선택할 수 없음 */
+    background: pink;
+}
+.list1+li{
+    /* list1클래스의 다음 형제 태그인 li태그 중 다음 형제 하나만 선택됨 */
+    background: blue;
+}
+.list+.box{
+    display: none;
+}
+/* 
+#ddd.eee -> ddd아이디와 eee클래스를 가진 하나
+#ddd .eee -> ddd아이디 안에서 eee클래스를 가진 모든 태그
+class{blue} / .blue{color:blue; 먼저 스타일 설정해놓고 html에 클래스 넣어서 적용시킬 수 있다
+class{red}
+*/
+.box2>h3:nth-child(3){
+    /* (1)입력시-> box2클래스 자식태그인 h3태그 중 첫번째 자식인 title1을 선택
+    2번째 자식은 p태그이기 때문에 title2를 바꾸려면 (3)을 입력해야한다 */
+    color: red;
+}
+.box2>h3:nth-of-type(3){
+    /* box2클래스의 자식 h3태그타입 중에서 3번째 태그를 선택
+    nth-는 우선순위 점수가 없다 */
+    color: blue;
+}
+.list_box>li:nth-of-type(2n){
+    /* 2n은 짝수 전부 선택 */
+    font-size: 3rem;
+}
+.list_box>li:nth-of-type(2n+1){
+        /* 2n-1 또는 2n+1은 홀수 전부 선택 */
+    text-decoration: underline;
+}
+.list_box>li:nth-of-type(3n+1){
+    color: red;
+}
+a[target="_blank"]{
+    background: #000;
+    color: #fff;
+}
+a[href="http://www.naver.com"]{
+    color: #aaa;
+    text-decoration: line-through; /* 취소선 스타일 */
+    pointer-events: none; /* 클릭이 안되게 함 */
+}
+p[data-jina="지나설명"]{
+    font-style: italic;
+}

@@ -1,0 +1,93 @@
+.box{
+    border: 10px solid black;
+    width: 400px;
+    height: 400px;
+}
+.a{
+    position: relative;
+    /* 현재 위치를 기준으로 이동할 준비를 한다
+    주변에 있는 태그들에 영향을 주지 않고 이동한다
+    left / right/ top/ bottom 쓸 수 있다 left,right둘다 주지말고 하나만 */
+    /* left: 100px; */
+    /* 박스의 왼쪽선을 기준으로 박스 안쪽으로 이동 */
+    right: 100px;
+    /* top: 100px; */
+    /* 박스의 안쪽으로 들어가는 것이기 때문에 아래로 내려간다
+    top인데 내려가기 때문에 상대적이라고 함 relative*/
+    /* bottom: 100px; */
+    /* 원래 있던 자리를 그대로 차지하고있기때문에 아래에 오는 p태그가 위로 올라오지 않고 원래있던 자리 아래로 들어간다 */
+    bottom: 100px;
+}
+.b{
+    position: absolute;
+    /* 안하면 normal flow상태
+    absolute하면 일반 흐름에서 떨어져나와서 공중에 떠있는 상태가 된다 다른 태그들에 영향 받지 않고 위에 존재한다 */
+    right: 100px;
+    /* normal flow에서 떨어져나온다 부모태그를 기준으로 이동하게된다(body태그의 하단에서 100px위로 올라와서 배치가 되게된다) 
+    부모태그에 포지션이 없는경우 그 위 조상태그를 기준으로 한다
+    기준이 명확해야 쓸 수 있다
+    기준이 없으면 화면기준으로 배치되기때문
+    부모태그를 만들어주고 설정해야한다*/
+    bottom: 100px;
+    background-color: aqua;
+    z-index: 2;
+    /* 기본값은 0이기 때문에 2인 b클래스가 가장 위로 온다 */
+}
+.c{
+    position: absolute;
+    right: 150px;
+    bottom: 150px;
+    background-color: pink;
+    z-index: 1;
+}
+.d{
+    position: absolute;
+    right: 200px;
+    bottom: 200px;
+    background-color: olivedrab;
+    /* 가장 나중에 만들었기 때문에 맨 위에 있다 */
+}
+.boxwrap{
+    border: 10px solid orange;
+    height: 200vh;
+    position: relative;
+}
+.innerbox{
+    border: 10px solid green;
+    height: 100vh;
+    width: 1000px;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+.frame{
+    border: 10px solid red;
+    position: relative;
+    /* relative는 단독으로 쓰이지 않고 absolute를 쓰기 위해 쓰인다 */
+    height: 500px;
+}
+.con{
+    border: 10px solid blue;
+    width: 60%;
+    /* margin: 0 auto; */
+    /* margin 안먹는다 왜냐면 공중에 떠있기 때문에 */
+    left: 20%;
+    top: 100px;
+    position: absolute;
+    /* con이 공중에 뜨면서 공간차지를 안하게 되기 때문에 부모태그인 frame은 높이가 0이되게된다
+    frame에게 높이 강제로 지정해줘야 한다 relative설정해줘도 안됨 */
+    /* 팝업 만들때나 사용 일반적으로 사용하지 않는다 */
+}
+.e{
+    position: fixed;
+    /* 화면에 고정하다 */
+    right: 100px;
+    bottom: 100px;
+}
+.f{
+    position: sticky;
+    /* 스크롤을 내리다가 이 태그에 도달하면 그때부터 fixed처럼 고정되어 따라다닌다 다시 스크롤을 올려서 태그 위치로 가면 그 자리에 있는다 */
+    /* 부모태그에 높이가 지정되어있어야 된다 */
+    left: 100px;
+    top: 100px;
+}

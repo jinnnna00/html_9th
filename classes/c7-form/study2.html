@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입양식</title>
+</head>
+<body>
+    <!-- form태그 눈에 안보이지만 항상 넣어야한다 -->
+    <form action="#">
+        <!-- fieldset태그는 폼 안에서 쓸 수 있는 섹션태그 각종 정보를 받을 때 사용 -->
+        <fieldset>
+            <!-- legend태그는 필드셋 안에서의 제목태그 (일반 맥락에서는 사용x)(feildset쓸때만)
+             영역이 많은 경우 fieldset을 쓴다 -->
+            <legend>계정정보</legend>
+            <div>
+                <label for="user_id">아이디</label>
+                <input type="text" id="user_id" required>
+                <button>중복확인</button>
+            </div>
+            <div>
+                <label for="user_pw">비밀번호</label>
+                <input type="password" id="user_pw" required>
+            <div>
+                <label for="user_pw_re">비밀번호 재입력</label>
+                <input type="password" id="user_pw_re" required>
+                <button>확인</button>
+            </div>    
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>개인정보</legend>
+            <div>
+                <!--maxlangth속성 써서 이름 입력 길이 제한 -->
+                <label for="user_name">이름</label>
+                <input type="text" id="user_name" maxlength="6">
+            </div>
+            <div>
+                <!-- radio속성은 선택버튼 만들때 사용 라디오버튼 누르는거에서 유래-->
+                <!-- span태그는 맥락없이 부분부분 선택을 하고자 할 때 사용하는 태그 -->
+                <span>성별</span>
+                <!-- name태그 써서 여러개 중 하나만 선택 할 수 있다-->
+                <input type="radio" id="male" name="gender" checked><label for="male">남자</label>
+                <input type="radio" id="female" name="gender"><label for="female">여자</label>
+                <input type="radio" id="nogender" name="gender"><label for="nogender">선택안함</label>
+            </div>
+            <div>
+                <select name="" id="user_birth_year">
+                    <!-- option의 value속성 비워놔도됨
+                     근데 개발자들은 무조건 value 써야됨
+                     이런 숫자선택은 자바스크립트로 하면됨 -->
+                    <option value="선택안함">출생년도 선택</option>
+                    <option>2005</option>
+                    <option>2004</option>
+                    <option>2003</option>
+                    <option selected>2002</option>
+                    <option>2001</option>
+                    <option>2000</option>
+                    <option>1999</option>
+                    <option>1998</option>
+                    <option>1997</option>
+                    <option>1996</option>
+                    <option>1995</option>
+                </select>
+                <label for="user_birth_year">년</label>
+                <select name="" id="user_birth_month">
+                    <option value="월 선택 안함">월 선택</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <label for="user_birth_month">월</label>
+                <select id="user_birth_day">
+                    <option value="일 선택 안함">일 선택</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <label for="user_birth_day">일</label>
+            </div>
+            <!--내가 해본거(숫자입력방식) 
+            <div>
+                <label for="user_birth">생년월일</label>
+                <input type="text" id="user_birth" maxlength="8">
+            </div> -->
+        </fieldset>
+        <fieldset>
+            <legend>기타정보</legend>
+            <div>
+                <span>취미</span>
+                <!-- checkbox는 여러 선택사항을 입력받을 때 사용 해제가 가능하다 -->
+                <input type="checkbox" id="hobby1" checked><label for="hobby1">영화보기</label>
+                <input type="checkbox" id="hobby2"><label for="hobby2">책읽기</label>
+                <input type="checkbox" id="hobby3"><label for="hobby3">음악듣기</label>
+                <input type="checkbox" id="hobby4"><label for="hobby4">산책하기</label>
+                <input type="checkbox" id="hobby5"><label for="hobby5">운동하기</label>
+                <input type="checkbox" id="hobby6"><label for="hobby6">요리하기</label>
+                <input type="checkbox" id="hobby7"><label for="hobby7">친구만나기</label>
+                <input type="checkbox" id="hobby8"><label for="hobby8">그림그리기</label>
+                <input type="checkbox" id="hobby9"><label for="hobby9">봉사활동하기</label>
+                <input type="checkbox" id="hobby10"><label for="hobby10">쇼핑하기</label>
+            </div>
+            <div>
+                <label for="user_text">자기소개</label>
+                <!-- textarea태그는 장문의 글을 쓸 수 있다 inputtext태그는 입력 가능한 글자수 제한이 있다 한줄짜리 짧은 텍스트 받을 때 사용 -->
+                <textarea id="user_text">자기소개글을 최대 1000자 까지 남겨주세요.</textarea>
+            </div>
+        </fieldset>
+        <!-- button과 input태그는 반드시 form태그 안에 있어야한다 -->
+        <button type="submit">가입하기</button>
+        <!-- input_reset은 선택버튼으로 생성되며 전체 내용이 초기화된다 -->
+        <input type="reset" value="다시작성">
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* common style : 공통적으로 적용하는 스타일을 먼저 설정한다*/
+html{
+    font-family: 'Pretendard';
+    font-size: var(--font-size-pc,20px);
+    /* 변수값을 보여주지 못할 경우를 대비해서 예비적으로 써준다 */
+    line-height: 1.4;
+    /* 행간 1.4로 설정 그러나 reset.css에서 제목행간은 1.2로 지정해놨기 때문에 그렇게 설정된다 */
+    word-break: keep-all;
+
+}
+.innerContent{
+    width: 1440px;
+    margin: 0 auto;
+}
+.btnCommon{
+    font-size: 0.9rem;
+    display: inline-block;
+    background-color: var(--main-color2);
+    font-weight: 700;
+    color: #000;
+    border-radius: 3rem;
+    padding: 0.8rem 2.15rem;
+    /* 사이즈 다 rem으로 통일시키기 */
+    text-transform: uppercase;
+}
+.btnCommon:hover{
+    color: var(--main-color);
+}
+.btnCommon:active{
+    background-color: #000;
+    color: var(--main-color2);
+}
+:root{
+    --main-color:#f37b21;
+    --main-color2:#dee856;
+    --font-size-pc:20px;
+    --font-size-tab:18px;
+    --font-size-mobile:14px;
+    --font-weight-thin:300;
+    --font-weight-bold:700;
+}
+/* thin-얇은 폰트 적용 (300) semantic tag
+bold - 굵은 폰트 (700)
+mc - main color */
+thin{font-weight: 300;}
+bold{font-weight: 700;}
+mc{color: var(--main-color);}
+h3{
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+}
+h4{
+    font-size: 3.5rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+
+li{
+    list-style: none;
+}

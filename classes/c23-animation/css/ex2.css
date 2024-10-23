@@ -1,0 +1,52 @@
+ul{list-style: none;}
+*{margin: 0; padding: 0;}
+.station{
+    font-weight: bold;
+    overflow: hidden; /*화면너비 두배로 설정해놨기 떄문에 설정*/
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    transform: scale(1.5) rotate(30deg);
+    z-index: -1;
+    opacity: 0.3;
+
+}
+.train{
+    width: 200%;
+    display: flex;
+}
+.train>li{
+    border: 1px solid lightcoral;
+    width: 50%;
+    white-space: nowrap; /*줄바꿈하지 않는다*/
+    overflow: hidden; /*텍스트가 삐져나갈까봐 대비해서 해놓은 것*/
+}
+.a{
+    font-size: calc(100vw / 16.5);
+    animation: slideA 10s linear -5s infinite;
+    /* delay 0초로 하면 빈화면에서 시작하기 때문에 -5초로 해야한다 */
+}
+.b{
+    font-size: calc(100vw / 16.5);
+    animation: slideB 10s linear 0s infinite;
+    /* a가 가고있는중이기 때문에 delay를 5초(화면 두배길이만큼 가는게 10초니까)줘야 한다
+    a와 b 사이 간격은 5초의 간격이 있어야한다*/
+    color: purple;
+}
+@keyframes slideA {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideB {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}

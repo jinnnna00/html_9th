@@ -1,0 +1,485 @@
+/* ----pc페이지 디자인------ */
+
+header{
+    height: 5rem;
+    /* background-color: var(--main-color); */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* hero에 position:relative줘서 안보이게 됐기 때문에 강제로 z-index를 줘서 보이게 한다*/
+}
+header .innerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.content2{
+    text-align: center;
+}
+.mo{display:none;}
+/* mo클래스를 가진애들은 모바일아닌 환경에서는 안보이게한다 */
+.gnb{
+    display: flex;
+    text-transform: uppercase;
+    /* border: 1px solid red; */
+    /* 헤더 둥글게 한 버전 */
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 3rem;
+
+}
+.gnb>li{
+    margin-right: 3rem; 
+    /* border: 1px solid red; */
+}
+.gnb>li:last-of-type{
+    margin-right: 0;
+}
+.hero{
+    /* border: 1px solid red; */
+    height: 100vh;
+    position: relative;
+    /* 자동으로 z-index가 0으로 설정되기 때문에 header가 안보이게 된다 */
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.heroDesc{   
+    background-color: rgba(0, 0, 0, 0.603);
+    /* 투명도는 클릭해서 설정 */
+    position: absolute;
+    /* 이 부분만 설정하는거니까(화면 따라다니게하는게 아니니까) 부모태그에 position:relative도 설정 */
+    left: 0;
+    top: 0;
+    /* 1440px의 너비를 가지고 왼쪽상단에 위치하게된다*/
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.hero .innerContent{
+    /* border: 1px solid red; */
+    height: 100%;
+    display: flex;
+    /* 높이 전체로 주고 나란히 정렬 */
+    flex-direction: column;
+    /* 메인축을 위에서아래로 변경 */
+    justify-content: center;
+    align-items: center;
+}
+.content1{
+    font-size: 3.2rem;
+    text-align: center;
+}
+.heroDesc p{
+    position: absolute;
+    left: calc(50% - 175px);
+    bottom: 2rem;
+    width: 350px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.con1{
+    /* border: 1px solid red; */
+    padding-top: 7.5rem;
+    text-align: center;
+    position: relative;
+}
+.con1.innerContent{
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+}
+.con1 p{
+    text-align: center;
+}
+.con1img{
+    margin-top:4rem;
+    line-height: 0;
+    
+}
+.con1:after{
+    /* 마지막 자식태그를 만든다? */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+p.desc{
+    margin-bottom: 4rem;
+}
+.con2{
+    /* margin-top: 4rem;
+    height: 100%; */
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+}
+.con2 .innerContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* 가운데 마진 줄 수도 있지만 자동으로 여백 갖게 해주는게 낫다 */
+    /* display: flex;
+    align-items: center;
+    justify-items: center; */
+    
+}
+.con2 section{
+    width: calc(50% - 3.5rem);
+}
+.pro3{
+    margin-top: 3.5rem;
+}
+.pro1>p{
+    margin-bottom: 1.5rem;
+}
+.pro1>p:last-of-type{
+    margin-bottom: 0;
+}
+.pro2 dl{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pro2 dl>dt{
+    /* border: 1px solid red; */
+    width: 12rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.pro2 dl>dd{
+    /* border: 1px solid blue; */
+    width: calc(100% - 12rem);
+}
+.pro2 p:last-of-type{
+    margin-bottom: 0;
+}
+.charlist{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.charlist>li{
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    color: var(--main-color);
+    padding: .5rem 1rem;
+    margin-right: .3rem;
+}
+.charlist>li.rev{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.pro3 dt{
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.pro4 dt{
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.certList>li{
+    margin-bottom: 1rem;
+    /* border: 1px solid red; */
+    display: flex;
+}
+.certList>li>i{
+    width: 12rem;
+}
+.certList>li>span{
+    width: calc(100% - 12rem);
+}
+.certList>li:last-of-type{
+    margin-bottom: 0;
+}
+
+.innerContent section{
+    /* border: 1px solid blue;
+    flex: wrap;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem; */
+}
+.con2.innerContent p{
+    /* margin-top: 2rem; */
+
+}
+.pro2> li{
+    /* border: 1px solid lime; */
+}
+.con3{
+    background-color: var(--main-color);
+    padding: 3.5rem 0;
+    color: #fff;
+}
+.con3 h5{
+    font-weight: var(--font-weight-bold);  
+    margin-bottom: 1.5rem;
+}
+.eduList{
+    /* border: 1px solid lime; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.eduList>li{
+    width: calc((100% - (3 - 1)*1rem) / 3);
+    /* (3-1)*1한 이유는 나중에 2줄로 바꿀 때 여백 한개로 줄어드니까 기억하기 편하라고 한거고 *1붙인 이유는 그래야 계산식 성립해서 */
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: 1rem 0;
+    
+}
+.eduList>li:nth-of-type(3n){
+    margin-right: 0;
+}
+.eduList li h6 img{
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.eduList h6{
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+
+.con4{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    text-align: center;
+}
+.popupList{
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+    display: flex;
+}
+.popupList>li{
+    width: calc((100% - (3 - 1)*1rem) / 3);
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: 1rem 0;
+    text-align: left;
+}
+.popupList>li:nth-of-type(3n){
+    margin-right: 0;
+}
+.popupList figure{
+    margin-bottom: 1rem;
+}
+.popupList>li>figure{
+    line-height: 0;
+}
+.popupList>li>div:nth-of-type(1){
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btnDown{
+    /* border: 1px solid red; */
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-bold);
+    background-color: var(--main-color2);
+    border-radius: 1rem;
+    padding: 0.4rem 1.2rem;
+}
+.btnDown:hover{
+    color: var(--main-color);
+}
+.popupList>li>figure.border{
+    border: 1px solid #0000;
+}
+.popupList>li>div h6{
+    font-weight: var(--font-weight-bold);
+}
+.popupList>li>p{
+    /* border:1px solid orange; */
+    margin: 1rem 0;
+}
+.popupList>li>div:nth-of-type(2){
+    /* border: 1px solid violet; */
+    display: flex;
+}
+.popupList>li>div:nth-of-type(2)>dl{
+    /* border: 1px solid blue; */
+    flex: 1;
+    /* flex-basis: 0%;
+    flex-grow: 1;
+    flex-shrink: 2; 
+    너비 50%랑의 차이*/
+}
+.popupList>li>div:nth-of-type(2)>dl dt{
+    font-weight: var(--font-weight-bold);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.popupList>li>div:nth-of-type(2)>dl dd{
+    display: flex;
+    align-items: center;
+}
+.thumbColor{
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: #fff;
+    font-size: 0;
+    margin-right: 0.5rem;
+    box-sizing: border-box;
+}
+.color_DC2026{
+    background-color: #DC2026;
+}
+.color_FFA338{
+    background-color: #FFA338;
+}
+.color_79588E{
+    background-color: #79588E;
+}
+.color_E51B13{
+    background-color: #E51B13;
+}
+.color_309912{
+    background-color: #309912;
+}
+.color_FFCFB7{
+    background-color: #FFCFB7;
+}
+.color_DD594E{
+    background-color: #DD594E;
+}
+.color_C0FF12{
+    background-color: #C0FF12;
+}
+.color_5CBAE9{
+    background-color: #5CBAE9;
+}
+.color_E9F4FF{
+    background-color: #E9F4FF;
+}
+.color_F9F9F9{
+    background-color: #F9F9F9;
+}
+.color_7D8084{
+    background-color: #7D8084;
+}
+
+.color_FFFFFF{
+    /* border: 1px solid black; */
+}
+.con5 .innerContent{
+    text-align: center;
+}
+
+.slideStation{
+    /* border: 1px solid blue; */
+    overflow: hidden;
+}
+.train{
+    width: 400%;
+    display: flex;
+    animation: slideMoveHorizontal 12s ease 0s infinite;
+}
+.train>li{
+    /* width: calc(100%/4); 는 flex:1로 써줄수있다*/
+    flex: 1; 
+    /*  */
+}
+.train>li figure{
+    line-height: 0;
+    /* width: 100%;
+    height: 600px; */
+}
+.train>li figure img{
+    width: 100%;
+    /* height: 100%;
+    object-fit: cover; */
+}
+.train>li .innerContent{
+    /* border: 1px solid skyblue; */
+    display: flex;
+    text-align: left;
+    margin-top: 2rem;
+}
+.train>li .innerContent section{
+    /* border: 1px solid coral; */
+    flex: 1;
+}
+.train>li .innerContent section:nth-of-type(1){
+    margin-right: 7rem;
+}
+.train>li .innerContent section div{
+    /* 섹션안에 div얘밖에 없으니깐 */
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.train>li .innerContent section div h6{
+    font-weight: var(--font-weight-bold);
+}
+.train>li .innerContent>section:nth-of-type(2){
+    display: flex;
+}
+.train>li .innerContent>section dl{
+    flex: 1;
+}
+.train>li .innerContent>section dl:nth-of-type(1){
+    margin-right: 1rem;
+}
+.train>li .innerContent>section dl dt{
+    font-weight: var(--font-weight-bold);
+    padding: 0.65rem;
+    margin-bottom: 1rem;
+}
+.train>li .innerContent>section dl dd{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* .con5{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+.con5 figure{
+    margin: 5rem 0 2rem 0;
+}
+.con5 .slideStation .innerContent{
+    display: flex;
+
+}
+.con5 .slideStation .sectionA{
+    border: 1px solid red;
+    width: 
+    
+}
+.con5 .slideStation .sectionA>div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-weight: var(--font-weight-bold)
+}
+.con5 .slideStation .sectionB{
+    te
+} */
+
+
+
+
+

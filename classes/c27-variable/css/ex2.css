@@ -1,0 +1,79 @@
+*{
+    margin: 0; padding: 0;
+}
+
+html{
+    font-size: 20px;
+}
+ul{
+    list-style: none;
+}
+.bmi{
+    width: 80%;
+    margin: 0 auto;
+    min-width: 800px;
+}
+.bmi h2{
+    background-color: rgb(93, 185, 221);
+    padding: 1rem;
+    color: white;
+}
+.bmi h2+p{
+    /* h2태그 다음에 오는 p태그 */
+    background-color: rgba(243, 242, 169, 0.788);
+    margin: 1rem;
+    padding: 1rem;
+}
+.bmi h2+p+div{
+    border: 1px solid grey;
+    margin: 1rem;
+    padding: 1rem;
+}
+.bmi h2+p+div dl{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.bmi h2+p+div dl>dt{
+    width: 50%;
+}
+.bmi h2+p+div dl>dd{
+    width: 50%;
+    color: red;
+}
+.bmiBarList{
+    display: flex;
+}
+.bmiBarList>li{
+    position: relative;
+    padding: 10px;
+}
+.bmiBarList>li>span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* top: -30px; 이렇게하면 숫자 달라졌을 때 문제 생길 수도*/
+    /* span태그에 너비높이를 지정하지 않고도 위치 지정을 하는 방법
+    위치를 위로 올려놓고 transform: trnaslate */
+    transform: translateY(-100%) translateX(50%); /*한 줄에 써야 둘 다 적용된다*/
+
+    
+
+}
+.bmiBarList>li:nth-of-type(1){
+    flex: 1.4;
+    background-color: lightblue;
+}
+.bmiBarList>li:nth-of-type(2){
+    flex: 1.2;
+    background-color: lightgreen;
+}
+.bmiBarList>li:nth-of-type(3){
+    flex: 1;
+    background-color: lightpink;
+}
+.bmiBarList>li:nth-of-type(4){
+    flex: 2;
+    background-color: rgba(255, 0, 0, 0.575);
+}

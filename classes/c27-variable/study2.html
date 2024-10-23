@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학관련 함수</title>
+</head>
+<body>
+    <h1>수학계산관련 함수</h1>
+    <p>모두 결과를 계산해서 함수가 사용되었던 자리에 결과 값을 남긴다.</p>
+    <script>
+        console.log(Math.ceil(5.4612427)) //올림 ->6
+        console.log(Math.round(5.4612427)) //반올림 ->5
+        console.log(Math.floor(5.4612427)) //버림 ->5
+        console.log(Math.pow(10,2)) //10의 2제곱 ->100
+        console.log(-Math.sqrt(100)) //루트값(음의 제곱근은 나오지 않고 양의 제곱근만 나온다 음의제곱근은 Math앞에 -) ->-10
+        console.log(Math.abs(-30)) //절대값 ->30
+        console.log(Math.max(3,67,32,77,30,15,38,-28)) //최대값
+        console.log(Math.min(3,67,32,77,30,15,38,-28)) //최소값
+        console.log(Math.random()) //랜덤 숫자(0보다 크고 1보다 작은 난수 생성)
+
+        let dice = Math.ceil(Math.random()*6) //0~1사이의 숫자에 *6
+        console.log(dice)
+        
+        console.log("나폴리맛피아"[dice-1]) //0~5까지의 랜덤숫자 번째의 문자를 보여준다
+
+
+    </script>
+</body>
+</html>

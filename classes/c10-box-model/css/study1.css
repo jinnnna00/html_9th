@@ -1,0 +1,96 @@
+*{
+    /* *은 모든 태그라는 뜻
+    모든 태그에 적용된다
+    우선순위는 1점
+    */
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid rgb(223, 169, 220); */
+    /* 기본적으로 설정된 여백을 0으로 만들어놓고 시작하기위해 씀
+    웹사이트 만들때 항상 쓴다
+    여백은 상속되지 않는다
+     */
+}
+.box{
+    /* border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: red; */
+    /* border-left: 1px solid red; */
+
+    /* border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: red; */
+    /* border-top: 1px solid red; */
+
+    /* border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: red; */
+    /* border-right: 1px solid red; */
+
+    /* border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: red; */
+    /* border-bottom: 1px solid red; */
+
+    border: 1px solid red;
+
+    /* margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px; */
+    margin: 100px; /*사방에 똑같은 마진 100px*/
+    margin: 50px 100px; /*위아래 50px 좌우가 100px*/
+    margin: 20px 100px 50px; /*위20px 좌우가 100px 아래 50px*/
+    margin: 10px 20px 30px 50px; /*위10px 오른쪽20px 아래 30px 왼쪽 50px(시계방향대로)*/
+}
+.box2{
+    border: 1px solid blue;
+    /* margin은 중첩되어 적용되지 않는다
+    태그가 인접한 경계의 마진은 둘 중 큰 값으로 적용된다(위아래 마진만, 좌우마진은 둘 다 적용된다.) */
+    margin-top: 10px;
+    /* padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px; */
+    padding: 20px;
+}
+.box2>p{
+    border: 1px solid red;
+}
+/* html{
+    border: 1px solid pink;
+}
+body{
+    border: 1px solid greenyellow;
+}*/
+.line1{
+    /* 컨텐트박스 규격을 정할 수 없다
+    인라인레벨태그는 박스형태의 컨텐트박스가 아니라 라인형태이기 때문에 위아래 padding/margin은 쓰지 않는다. 좌우 padding/margin만 사용한다.
+    글씨 시작과 끝나는 부분이 padding의 기준
+    */
+    border: 1px solid rgb(247, 150, 39);
+    /* padding: 10px; */
+}
+#container{
+    border: 10px solid darkmagenta;
+    /* 너비 auto상태라 브라우저 크기에 따라 바뀌지만 너비를 설정해주면 상속보다 우선하기 때문에 설정한 너비로 된다 
+    높이는 글의 양 만큼 자동으로 조절된다*/
+    width: 300px;
+    /* 내용보다 높이가 낮으면 내용이 흘러넘치게된다 
+    그 상황에서 아래 태그를 추가하면 글자가 겹쳐져서 보이게된다 그래서 높이는 잘 설정하지 않는다
+    태그는 border를 기준으로 배치된다*/
+    /* height: 100px; */
+    padding: 20px;
+    /* 박스사이즈를 설정할 수 있고 기본적으로 content-box로 설정
+    보라색테두리의 시작점부터 끝까지 360px */
+    box-sizing: content-box;
+}
+.box3{
+    border: 10px solid darkorange;
+    width: 300px;
+    padding: 20px;
+    /* border box의 굵기까지 포함된 박스의 사이즈를 설정
+    주황색테두리의 시작점부터 끝까지가 300px
+    content box의 너비는 240px가 된다 */
+    box-sizing: border-box;
+}

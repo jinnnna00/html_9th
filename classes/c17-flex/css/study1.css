@@ -1,0 +1,119 @@
+*{
+    margin: 0; padding: 0;
+}
+.box{
+    border: 10px solid black;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto; /*중앙에 배치 고정컨테이너 가변여백*/ 
+    display: flex; /*좌우로 배치*/
+    /* flex conatiner: 
+    flex item:
+    컨테이너 안에 아이템들이 배치-> 아이템은 컨테이너에 설정된 설정에 따른다
+    메인축(설정되는 축) 교차축(메인축에따라 정해지는 축) : 교차축은 메인축의 90도방향으로 정해짐
+    flex-start flex-end 지점*/
+    flex-direction: row; /*기본값 row
+    row-revers:메인축이 오른쪽이되고 flex-end가 왼쪽으로 가게된다
+    column: 메인축방향이 위에서 아래로되고 교차축이 왼쪽에서 오른쪽이된다
+    column-reverse: 메인축방향이 아래에서 위로 바뀌고 교차축은 그대로 왼쪽에서 오른쪽이 된다*/
+    justify-content: flex-start;
+    /* justify는 메인축정렬을 의미한다 방향이 변동될 수 있기 때문에 start,end개념을 사용
+    space-between : item을 양끝에 좌우로 배치한 뒤 동일한 여백을 가지게 배치
+    space-around : item을 기준으로 좌우 여백이 동일하게 들어가게 배치(item이 가운데로 오게 배치)
+    flex-start: 메인축 flex-start부터 정렬
+    center: 메인축의 중앙에 정렬
+    */
+    align-items: center; /*stretch가 기본값(지정된 height만큼 늘어나게 된다 줄바꿈이 되면 그 행까지만 늘어난다)
+    flex-start/end : 교차축 start/end지점에 정렬
+    center : 교차축 중앙 지점에 정렬
+    space-around 이런 값은 없다
+    */
+    flex-wrap: wrap;
+    /* nowrap: 기본설정 아이템이 흘러넘쳐도 줄바꿈 되지 않는다
+    wrap: 흘러넘치는걸 아래행으로 보냄 */
+    align-content: flex-end;
+    /* flex-end: */
+
+}
+.box > div{
+    border: 1px solid green;
+    /* display: inline-block;
+    width: 100px; */
+    /* flex-direction: row; 지정 불가(flex-container에만 지정가능) */
+}
+/* 인라인으로 배치하는것과의 차이: 인라인 블록으로 배치하는건 글자처럼 배치하는것 높이가 다른경우 상단 정렬이 되지 않는다 
+라인형태기 때문에 가로세로 속성을 설정 할 수 없다 
+장문을 쓰는 경우 나란히 배치가 되지 않는다(아래로 배치가된다)
+레이아웃을 배치하는 것과 다르다*/
+
+.h100{
+    height: 100px;
+}
+/* ----여기까지 flex-container에 지정하는 속성 */
+
+.box2{
+    border: 10px solid brown;
+    width: 800px; /*가변컨테이너*/
+    margin: 0 auto; /*중앙정렬*/
+    margin-bottom: 50vh;
+    display: flex;
+    /* flex-wrap: wrap; 줄바꿈 허용 */
+}
+.box2>div{
+    border: 1px solid blue;
+    /* width: 200px; */
+    /* 너비 200으로 설정되지만 화면이 줄어들면 그 이하로 줄어든다 */
+    flex-basis: 200px; /*width처럼 아이템의 가로사이즈를 지정*/
+    flex-shrink: 1;
+    /* 컨테이너가 줄어든만큼 아이템 각각의 크기가 동일한 비율로 줄어들게된다
+    flex-shrink: 1;이 기본값*/
+}
+.box2>div:nth-of-type(1){
+    flex-shrink: 0;
+    /* flex-shrink: 2; ->첫번째 item이 남들보다 두배 더 빼겠다는 뜻
+    flex-shrink: 0; ->첫번째는 안빼고 나머지들이 나눠서 뺀다 */
+}
+
+.box3{
+    border: 10px solid brown;
+    width: 800px; /*가변컨테이너*/
+    margin: 0 auto; /*중앙정렬*/
+    margin-bottom: 50vh;
+    display: flex;
+    /* flex-wrap: wrap; 줄바꿈 허용 */
+}
+.box3>div{
+    border: 1px solid blue;
+    flex-grow: 1; /*남은 여백을 1:1:1..의 비율로 나눠가진만큼 커진다 애초에 글자수가 달랐기 때문에 최종적으로 가지게 된 크기는 다르다*/
+    /* flex-grow: 0이 기본값 */
+}
+.box3>div:nth-of-type(1){
+    flex-grow: 3;
+    order: 2;
+    align-self: flex-start; /*1만 시작지점으로 정렬된다*/
+}
+.box3>div:nth-of-type(2){
+    /* flex-grow: 3; */
+    order: 1;
+    align-self: stretch; /*2만 stretch된다*/
+}
+
+.box4{
+    border: 10px solid red;
+    width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: flex;
+}
+.side{
+    background: lightcyan;
+    flex-basis: 200px; /*또는 width를 200px*/
+}
+.contents{
+    background: lightseagreen;
+    flex-grow: 1; /*나머지 여백 채우기*/
+}
+.box3{
+    height: 300px;
+    align-items: center;
+}

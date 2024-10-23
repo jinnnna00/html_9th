@@ -1,0 +1,110 @@
+*{
+    margin: 0; padding: 0;
+}
+header{
+    position: fixed;
+    /* 포지션 넣어주면 좌표 넣어줘야 */
+    left: 0;
+    top: 0;
+    /* display가 인라인블록으로 바뀌기 때문에 너비를 주지 않으면 글자크기만큼 작아진다 */
+    /* width: 100%; */
+    right: 0;
+    /* 이렇게 써도 width:100%와 같다 오른쪽에서 0픽셀 떨어진것과 같다*/
+    height: 56px;
+    background-color: khaki;
+    display: flex;
+    justify-content: space-between;
+    /* 사이간격 일정하게 */
+    align-items: center;
+    padding: 0 16px;
+    /* box-sizing: border-box; 
+    이건 width: 100%로 했을 경우 이렇게 해야 padding-right가 보이게됨*/
+    /* padding대신 left, right를 16px로 설정할 수 있지만 이런 경우엔 그 부분에 배경색을 설정할 수 없게된다*/
+}
+header>div{
+    height: 24px;
+    background-color: salmon;
+}
+
+aside{
+    width: 240px;
+    height: calc(100vh - 56px);
+    background-color: cornflowerblue;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    overflow: auto;
+    /* 높이를 설정해줬기 때문에 없으면 내려서 볼 수 없음 */
+}
+.category{
+    background-color: lightpink;
+    position: fixed;
+    width: calc(100% - 240px);
+    top: 56px;
+    left: 240px;
+    height: 56px;
+    right: 0; 
+    /* 너비 지정해줘서 안해도 됨 동일한 효과*/
+}
+main{
+    background-color: lightgreen;
+    min-height: 200vh;
+    margin-left: 240px;
+    margin-top: 112px;
+    padding: 16px;
+/* main{
+    background-color: lightgreen;
+    position: fixed;
+    top: 112px;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: calc(100% - 112px);
+    overflow: auto; 
+} 여러 방법으로 구성할 수 있다*/
+}
+.logo{width: 170px;}
+.search{width: 225px;}
+.account{width: 730px;}
+
+aside>div{
+    min-height: 300px;
+    background-color: sienna;
+    border-bottom: 1px solid black;
+    padding: 12px;
+}
+aside>div>section{
+    min-height: 150px;
+    background-color: lightseagreen;
+    border-bottom: 1px solid black;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+/* 주로 공통 스타일을 만들어놓고 맨 마지막것만 스타일을 빼주는 방식으로 한다 */
+aside>div>section:last-of-type{
+    border-bottom:none;
+    margin-bottom: 0;
+}
+ul{list-style: none;}
+.normalvideo ul li{
+    background-color: skyblue;
+    height: 340px;
+    width: calc((100% - 48px)/4);
+    /* width: calc((100% - 16px*(4 - 1))/4); 
+    한줄에 세개 배치시 3으로 바꿔줄 수 있다 아래도 3배수로 변경해줘야 함*/
+    margin-right: 16px;
+    margin-bottom: 32px;
+}
+.normalvideo ul li:nth-of-type(4n){
+    margin-right: 0;
+}
+.normalvideo ul{
+    display: flex;
+    flex-wrap: wrap;    
+}
+.normalvideo ul li:nth-last-of-type(1),
+.normalvideo ul li:nth-last-of-type(2),
+.normalvideo ul li:nth-last-of-type(3),
+.normalvideo ul li:nth-last-of-type(4){
+    margin-bottom: 0;
+}
+    /* 리스트 중 마지막꺼 선택해서 밑에 margin없애주기 */

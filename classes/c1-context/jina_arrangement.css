@@ -1,0 +1,9 @@
+:hover{
+    마우스 올렸을 때 효과
+}
+display: none; [영역을 차지하지 않게되고 존재하지 않는 것 처럼 사라진다]
+display: block; [한 블록 다 차지한다]
+display: inline; [줄바꿈이 없다 / 크기속성 지정 할 수 없다]
+display: inline-block; [줄바꿈이 없지만 크기 속성 지정 할 수 있다]
+
+

@@ -1,0 +1,37 @@
+h1:hover{
+    background: blue;
+    color: #fff;
+}
+h1:active{
+    letter-spacing: 20px;
+    text-decoration: underline;
+    background-color: palevioletred;
+}
+p{
+    display: flex;
+    /* 아니면 before,after태그에 display:inline-block;설정하면 됨 */
+    border: 1px solid blue;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+p:before{
+    /* before태그는 p태그 안에 자식태그로서 첫번째 자식으로 오는것 */
+    content: "";
+    /* content속성은 반드시 있어야한다 */
+    width: 50px;
+    /* p태그에 display:flex 적용시켰기 때문에 이제 너비지정 된다  */
+    height: 50px;
+    border: 1px solid red;
+    /* width: 500px;
+    display속성이 인라인이기 때문에 너비지정이 안된다
+    display: block; */
+    background: url("../img/quote1.png") no-repeat 50% 50% /contain;
+}
+p:after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    background: url("../img/quote2.png") no-repeat 50% 50% /contain;
+}

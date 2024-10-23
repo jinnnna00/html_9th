@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자의 우선순위 점수</title>
+    <style>
+        /* 인라인 스타일(1000점)을 능가할 방법 
+        속성값 뒤에 !important 넣으면 반드시 해당값으로 적용하겠다 라는 뜻 (무조건 반영된다)*/
+        p{
+            color: black!important;
+        }
+        /* 우선순위 점수 121점 클래스가 두개라서 */
+        p#aa.a.b{
+            color: green;
+        }
+        /* 우선순위 점수 111점으로 아래와 동일하지만 black이 아래있기 때문에 최종적으로 black으로 적용된다 */
+        p#aa.a{
+            color: red;
+        }
+        /* p태그면서 클래스가 a이고 아이디가 aa인 태그를 선택한다
+        우선순위 점수 111점 */
+        p.a#aa{
+            color: black;
+        }
+         /* p태그 중 아이디가 aa인 태그를 선택한다는 뜻 
+         합산하여 101점이 된다*/
+         p#aa{
+            color:  red;
+        }
+        /* 우선순위 점수 100점
+        아이디가 aa인 태그를 선택
+        아이디에 적용했기 때문에 맨 위에 있어도 우선되어 적용된다 */
+        #aa{
+            color: blue;
+        }
+        /* p태그면서 아이디가 a인 태그 
+        우선순위 점수 11점*/
+        p.a{
+            color: blue;
+        }
+        /* 우선순위 점수 10점 */
+        /* 충돌되는것만 맨 마지막에 있는 속성이 적용된다 */
+        .a{color: red; color: blue; color: green;}
+        .a{color: violet; background-color: aquamarine;}
+        .a{
+            color: red;
+        }
+        /* 태그는 .없이 선택하여 적용가능
+        우선순위 점수 1점
+        그렇기 때문엥 위에 a클래스에 적용된 속성이 먼저 적용되고 클래스가 없는 p태그만 적용된것 */
+        p{color: blue;}
+       
+    </style>
+</head>
+<body>
+    <h1>선택자 점수</h1>
+    <p>css는 선택자 부분의 표현이 특이점이 높을수록 우선순위가 높게 적용된다.</p>
+    <p>우선순위가 높게 적용된다라는 것은 css스타일이 최종적으로 적용된다라는 뜻이다.</p>
+
+    <hr>
+    <h2>단계적으로 적용되는 css</h2>
+    <!-- 클래스 이름이 a,b 두개인것 -->
+    <p class="a b " id="aa" style="color: blueviolet;">브라우저는 위에서 아래, 왼쪽에서 오른쪽으로 소스코드를 해석한다. 그렇기 때문에 나중에 적용한 스타일 속성이 최종 적용되는 속성이 된다.</p>
+
+    <hr>
+    <h2>선택자의 우선순위 점수</h2>
+    <p>태그를 선택하는 선택자는 우선순위 점수가 높을수록 최종스타일로 적용된다(우선순위점수는 합산된다)</p>
+    <!-- 우선순위 점수는 합산되나 해당 자릿수를 넘어갈 수는 없다(10점짜리 클래스 10개한다고 100점 되는게 아님) -->
+    <ul>
+        <li>태그명으로 선택 - 1점</li>
+        <li>클래스명으로 선택 - 10점</li>
+        <li>아이디명으로 선택 - 100점</li>
+        <li>인라인스타일방식 - 1000점</li>
+        <li>!important - 무조건 적용</li>
+    </ul>
+
+</body>
+</html>

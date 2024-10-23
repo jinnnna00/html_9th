@@ -1,0 +1,71 @@
+/* 공통스타일 -홈페이지에서 공통적으로 사용되는 스타일들을 상속설정을 하여 유지보수가 쉽게할 수 있게한다*/
+/* 글씨체, 글씨크기, 행간 을 주로한다 */
+@font-face {
+    font-family: "풀무원체";
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
+html{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    /* 1rem = 20px이 된다 */
+    /* padding이나 font size들을 다 rem을 단위로 써준다*/
+    line-height: 1.4; /*(140%)*/
+    word-break: keep-all; /*단어 안쪼개지게 설정*/
+}
+/* 설정 해두면 html에서 클래스 걸어서 폰트 변경가능 */
+.font_pul{
+    font-family: "풀무원체";
+}
+/* 여기까지 공통스타일-------------------- */
+.banner{
+    height: 250px; /*기본값 :auto*/
+    background: url(../img/sub_vis01_02.jpg) no-repeat 50% 50% /cover; 
+    /*배경색 / 링크 / 반복 / 포지션 순서로 써준다*/
+    /* cover- wide화면에서도 잘리지 않고 늘려서 보여준다 */
+}
+main{
+    /* border: 1px solid red; */
+    width: 1200px;
+    margin: 0 auto; /*좌우여백 auto*/
+    margin-top: 50px;
+    /* margin: 2.5rem auto 0; 이렇게 설정가능 (높이는 rem단위가능)(모바일로 설정하는 경우 html글씨크기 줄이면 전체적으로 줄일 수 있다) */
+}
+main h2{ /*그냥 h2태그로 설정하지 말고 main 안에 있는걸로 설정*/
+    /* border: 1px solid blue; */
+    font-size: 30px; /*1.5rem*/
+    background: url(../img/sub_tit_line.gif) repeat-x 0 center; /*center = 50% 단위로 쓸 수 있음, px단위로 설정가능 */
+    /* text-align: center; */
+    margin-bottom: 5rem;
+}
+h2 span{
+    /* border: 1px solid black; */
+    background: #fff;
+    padding-right: 0.9rem;
+}
+main h3{
+    /* border: 1px solid red; */
+    font-size: 2.6rem;
+    text-align: center; /*가운데정렬*/
+    font-family: "풀무원체";
+    padding: 0 3.5rem;
+    margin-bottom: 2.5rem;
+}
+main h3 strong{
+    color: #7eae4b
+}
+section.box{
+    width: 810px;
+    box-sizing: border-box;
+    /* 회색박스 너비가 810이니까 패딩을 넣고 boxsize를 border size로 설정해야됨 */
+    padding: 2rem 4.5rem 2.5rem; 
+    background: #f4f4f4;
+    margin: 0 auto; /*가운데로*/
+    text-align: center; /*중앙정렬*/
+}
+.box h4{
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+.box p:nth-of-type(1){/* box 안에 있는 p태그 중 첫번째 p태그 */
+    margin-bottom: 1.5rem;
+}

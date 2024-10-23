@@ -1,0 +1,48 @@
+*{
+    /* css에서는 숫자가 0인 경우에만 한하여 단위를 생략해서 표현할 수 있다. */
+    margin: 0;
+    padding: 0;
+}
+#container{
+    border: 10px solid black;
+    width: 1200px;
+    /* height의 높이를 정하지 않았으므로 auto로 설정되어 안에 오는 content의 양만큼이 높이가 된다 */
+}
+.a{
+    background: red;
+    width: 500px;
+    height: 300px;
+}
+.b{
+    background: orange;
+    width: 500px;
+    height: 200px;
+    border: 10px solid lime;
+}
+.c{
+    background: green;
+    width: 500px;
+    height: 150px;
+    border: 10px solid aqua;
+    /* borderbox 포함해서 500px이라는 뜻 -> contentbox크기는 130px이다 */
+    box-sizing: border-box;
+}
+
+a 300
+b 220
+c 130
+10 300 10 200 10 150 10 
+d 690
+e 500
+
+1840
+
+/* 
+    A : a클래스의 컨텐츠박스 높이 
+    B : b클래스의 테두리 포함 박스 높이 
+    C : c클래스의 컨텐츠 박스 높이 
+    D : container의 테두리 포함 박스 높이 
+    E : b클래스의 컨텐츠 박스 너비 
+
+    A+B+C+D+E = 몇 px 일까요? 
+*/

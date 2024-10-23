@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap1{
+    border: 5px solid #000000;
+    width: 1200px;
+    /* 컨텐트박스가 화면 중앙에 오게 하는 법 */
+    margin-left: auto;
+    margin-right: auto; 
+    margin: 0 auto;
+}
+.wrap2{
+    border: 5px solid #000000;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.wrap3{
+    border: 5px solid #000000;
+    /* 컨텐트박스의 너비는 자동이지만 margin 20px로 고정값이기 때문에 여백의 크기는 화면의 크기와 관계없이 고정된다 예)youtube */
+    margin: 0 20px;
+    margin-top: 50px;
+
+}
